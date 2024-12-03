@@ -1,0 +1,47 @@
+.dialog-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 20px;
+  background-color: white; /* Fundo branco */
+  text-align: center;
+  max-width: 600px; /* Largura máxima */
+  margin: 0 auto;
+  overflow: hidden; /* Previne vazamentos */
+}
+
+
+.dialog-container h2 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #333; /* Cor do título */
+  border-bottom: 1px solid #ddd; /* Linha fina abaixo do título */
+  padding-bottom: 10px; /* Espaçamento entre o texto e a linha */
+}
+
+.dialog-container .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Espaçamento entre os elementos */
+}
+
+.dialog-container .content .logo {
+  max-width: 120px;
+  margin-bottom: 15px; /* Espaçamento abaixo do logo */
+}
+
+.dialog-container p {
+  font-size: 1rem;
+  color: #555; /* Cor do texto */
+  line-height: 1.6; /* Espaçamento entre linhas */
+  text-align: justify; /* Justifica o texto */
+}
+
+/* Botão de Fechar */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #333; /* Cor verde */
+}

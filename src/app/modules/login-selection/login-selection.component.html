@@ -1,0 +1,41 @@
+<div class="container">
+  <!-- Painel esquerdo -->
+  <div class="left-panel">
+    <h1>SysEstágio</h1>
+  </div>
+
+  <!-- Painel direito -->
+  <div class="right-panel">
+    <img src="assets/ifce-logo.png" alt="Instituto Federal" class="logo" />
+    <h2>Selecione seu tipo de Login:</h2>
+
+    <!-- Opções de login -->
+    <div class="login-options">
+      <div class="option" (click)="navigateTo('professor')">
+        <img src="assets/professor-icon.png" alt="Professor" />
+        <p>Professor</p>
+      </div>
+      <div class="option" (click)="navigateTo('aluno')">
+        <img src="assets/aluno-icon.png" alt="Aluno" />
+        <p>Aluno</p>
+      </div>
+      <div class="option" (click)="navigateTo('admin')">
+        <img src="assets/admin-icon.png" alt="Administração" />
+        <p>Administração</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ícones de ajuda e informação -->
+  <div class="footer">
+    <!-- Botão de Ajuda -->
+    <button mat-icon-button class="icon" (click)="openHelpDialog()">
+      <mat-icon>help_outline</mat-icon>
+    </button>
+
+    <!-- Botão de Informação -->
+    <button mat-icon-button class="icon" (click)="openInfoDialog()">
+      <mat-icon>info_outline</mat-icon>
+    </button>
+  </div>
+</div>

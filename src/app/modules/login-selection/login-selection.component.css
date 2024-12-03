@@ -1,0 +1,135 @@
+/* Container principal */
+.container {
+  display: flex;
+  height: 100vh; /* Ocupa toda a altura da janela */
+  width: 100vw; /* Ocupa toda a largura da janela */
+}
+
+/* Painel esquerdo */
+.left-panel {
+  flex: 1; /* Ocupa metade da largura */
+  background-color: #28a745; /* Fundo verde */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 4rem; /* Tamanho padrão do texto */
+  font-weight: bolder;
+}
+
+/* Específico para o texto no painel esquerdo */
+.left-panel h1 {
+  font-size: 7rem !important; /* Define o tamanho maior e evita sobrescrições */
+  margin: 0; /* Remove qualquer margem padrão */
+}
+
+/* Painel direito */
+.right-panel {
+  flex: 1; /* Ocupa metade da largura */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Alinha o conteúdo no centro */
+  padding: 20px;
+  gap: 20px; /* Espaçamento uniforme entre os elementos */
+}
+
+/* Logo do IFCE */
+.logo {
+  max-width: 120px;
+  margin-bottom: 20px; /* Espaço entre o logo e o título */
+  margin-top: 20px;
+}
+
+/* Título abaixo do logo */
+.right-panel h2 {
+  margin: 20px 0; /* Espaço acima e abaixo do título */
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* Opções de login */
+.login-options {
+  display: flex;
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  align-items: center; /* Alinha os itens verticalmente */
+  gap: 20px; /* Espaçamento uniforme entre os ícones */
+  width: auto; /* Evita ocupar largura total */
+  margin: 0 auto; /* Centraliza o contêiner */
+  padding: 0;
+}
+
+.option {
+  display: flex; /* Corrige a falta de flex nos itens individuais */
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  margin: 0; /* Remove margens extras */
+  width: 120px; /* Define largura consistente */
+  transition: transform 0.2s; /* Suaviza a transformação */
+}
+
+.option:hover {
+  transform: scale(1.2); /* Aumenta o tamanho ao passar o mouse */
+}
+
+/* Estilo das imagens das opções */
+.option img {
+  width: 90px; /* Tamanho dos ícones */
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover; /* Evita distorções */
+  margin: 0; /* Remove margens extras */
+  transition: transform 0.2s; /* Suaviza a transformação no hover */
+}
+
+.option:hover img {
+  transform: scale(1.1); /* Amplia ligeiramente a imagem ao passar o mouse */
+}
+
+/* Texto abaixo dos ícones */
+.option p {
+  margin: 5px 0 0 0; /* Espaçamento uniforme abaixo da imagem */
+  font-size: 1rem;
+  font-weight:lighter;
+  text-align: center;
+  line-height: 1.2; /* Garante espaçamento uniforme entre linhas */
+  transition: color 0.2s; /* Suaviza a mudança de cor */
+}
+
+.option:hover p {
+  color: #28a745; /* Muda a cor do texto ao passar o mouse */
+}
+
+/* Ícones de ajuda e informação */
+.footer {
+  position: fixed;
+  bottom: 20px; /* Alinha com o rodapé */
+  right: 20px; /* Alinha com a lateral direita */
+  display: flex;
+  gap: 15px; /* Espaçamento entre os ícones */
+}
+
+.footer .icon {
+  width: 50px; /* Tamanho do botão */
+  height: 50px; /* Altura do botão */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50%; /* Botão arredondado */
+  background-color: #f5f5f5; /* Fundo do botão */
+  color: #28a745; /* Cor do ícone */
+}
+
+.footer .icon:hover {
+  transform: scale(1.2); /* Ampliação no hover */
+  transition: transform 0.2s, background-color 0.2s;
+  background-color: #e0e0e0; /* Fundo mais escuro no hover */
+}
+
+.footer .icon mat-icon {
+  font-size: 1.5rem; /* Tamanho do ícone */
+  color: inherit; /* Herdar a cor do botão */
+}

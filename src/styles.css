@@ -1,0 +1,22 @@
+/* Remover margens e padding padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Garantir que o corpo e o HTML ocupem 100% do viewport */
+  html,
+  body {
+    height: 100%;
+    overflow: hidden; /* Remove scrollbars desnecessários */
+  }
+  
+  /* Definir estilo geral para o corpo */
+  body {
+    font-family: Arial, sans-serif; /* Substitua pelo que preferir */
+  }
+  
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+

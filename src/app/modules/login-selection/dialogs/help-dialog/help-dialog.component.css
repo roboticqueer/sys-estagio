@@ -1,0 +1,52 @@
+.dialog-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 20px;
+  background-color: white; /* Fundo branco */
+  text-align: center;
+  max-width: 600px; /* Largura máxima */
+  margin: 0 auto;
+  overflow: hidden; /* Previne vazamentos */
+}
+
+.dialog-container h2 {
+  font-size: 1.4rem;
+  margin: 0; /* Remove margens extras */
+  padding: 0px 40px 10px; /* Espaçamento interno:
+                              - 20px no topo
+                              - 40px nas laterais (para dar espaço ao botão)
+                              - 10px no fundo */
+  color: #333; /* Cor do título */
+  border-bottom: 1px solid #ddd; /* Linha separadora */
+  text-align: center;
+}
+
+.dialog-container .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+  gap: 0px; /* Espaçamento entre os elementos */
+}
+
+.dialog-container ul {
+  text-align: left; /* Alinha à esquerda a lista */
+  padding-left: 20px; /* Espaçamento à esquerda */
+  list-style-type: disc; /* Estilo dos marcadores */
+}
+
+.dialog-container ul li {
+  font-size: 1rem;
+  color: #555; /* Cor do texto */
+}
+
+/* Botão de Fechar */
+.close-button {
+  position: absolute;
+  top: 10px; /* Distância do topo */
+  right: 10px; /* Distância da direita */
+  color: #333; /* Cor verde */
+  z-index: 10; /* Garante que o botão fique acima de outros elementos */
+  cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+}
