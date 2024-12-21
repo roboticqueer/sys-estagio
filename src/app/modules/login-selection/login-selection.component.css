@@ -92,7 +92,7 @@
 .option p {
   margin: 5px 0 0 0; /* Espaçamento uniforme abaixo da imagem */
   font-size: 1rem;
-  font-weight:lighter;
+  font-weight: lighter;
   text-align: center;
   line-height: 1.2; /* Garante espaçamento uniforme entre linhas */
   transition: color 0.2s; /* Suaviza a mudança de cor */
@@ -121,6 +121,9 @@
   border-radius: 50%; /* Botão arredondado */
   background-color: #f5f5f5; /* Fundo do botão */
   color: #28a745; /* Cor do ícone */
+  border: none; /* Remove qualquer borda */
+  box-shadow: none; /* Remove sombras que podem parecer borda */
+  outline: none; /* Remove o outline padrão */
 }
 
 .footer .icon:hover {

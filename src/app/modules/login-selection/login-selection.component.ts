@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 
-// Caminhos corrigidos para os componentes de diálogo
-import { InfoDialogComponent } from './dialogs/info-dialog/info-dialog.component';
-import { HelpDialogComponent } from './dialogs/help-dialog/help-dialog.component';
+import { HelpDialogComponent } from '../dialogs/help-dialog/help-dialog.component';
+import { InfoDialogComponent } from '../dialogs/info-dialog/info-dialog.component';
+
 
 
 

@@ -1,1 +1,64 @@
-<p>professor works!</p>
+<div class="container">
+    <!-- Painel esquerdo -->
+    <div class="left-panel">
+      <h1>Sys Estágio</h1>
+    </div>
+  
+    <!-- Painel direito -->
+    <div class="right-panel">
+      <!-- Logo do IFCE -->
+      <img src="assets/ifce-logo.png" alt="Logo IFCE" class="logo" />
+  
+      <!-- Boas-vindas -->
+      <h2>BEM-VINDO PROFESSOR</h2>
+      <div class="professor-info">
+        <img src="assets/professor-icon.png" alt="Professor" class="professor-avatar" />
+        <p>Professor</p>
+      </div>
+  
+      <!-- Formulário de Login -->
+      <form>
+        <!-- Campo de E-mail -->
+        <mat-form-field appearance="fill">
+          <mat-label>E-MAIL</mat-label>
+          <input matInput type="email" placeholder="EX: professor@ifce.edu.br" [(ngModel)]="email" name="email" />
+          <button *ngIf="email" mat-icon-button matSuffix aria-label="Clear" (click)="email = ''">
+            <mat-icon>close</mat-icon>
+          </button>
+        </mat-form-field>
+  
+        <!-- Campo de Senha -->
+        <mat-form-field appearance="fill">
+          <mat-label>SENHA</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'" placeholder="Insira sua senha" [(ngModel)]="password" name="password" />
+          <button mat-icon-button matSuffix aria-label="Toggle password visibility" (click)="togglePasswordVisibility()">
+            <mat-icon>{{ hide ? 'visibility' : 'visibility_off' }}</mat-icon>
+          </button>
+        </mat-form-field>
+  
+        <!-- Checkbox de "Manter conectado" -->
+        <div class="options">
+          <mat-checkbox [(ngModel)]="stayConnected" name="stayConnected">
+            MANTER CONECTADO
+          </mat-checkbox>
+          <a href="#">ESQUECEU SUA SENHA?</a>
+        </div>
+  
+        <!-- Botão de Login -->
+        <button mat-raised-button color="primary" class="btn-login">
+          ENTRAR
+        </button>
+      </form>
+  
+      <!-- Ícones de ajuda e informação -->
+      <div class="footer">
+        <button class="icon" (click)="openHelpDialog()"> <!-- Abre o HelpDialog -->
+          <mat-icon>help_outline</mat-icon>
+        </button>
+        <button class="icon" (click)="openInfoDialog()"> <!-- Abre o InfoDialog -->
+          <mat-icon>info_outline</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+  

@@ -1,13 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AdminRoutingModule } from './admin-routing.module';
 import { AdminComponent } from './admin.component';
+import { FormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field'; // Importando MatFormFieldModule
+import { MatInputModule } from '@angular/material/input'; // Importando MatInputModule
+import { MatCheckboxModule } from '@angular/material/checkbox'; // Importando MatCheckboxModule
+import { MatIconModule } from '@angular/material/icon'; // Importando MatIconModule
+import { AdminRoutingModule } from './admin-routing.module';
 
 @NgModule({
-  declarations: [AdminComponent], // Certifique-se de que o componente está declarado aqui
+  declarations: [AdminComponent],
   imports: [
-    CommonModule, // Necessário para *ngIf, *ngFor, etc.
-    AdminRoutingModule, // Certifique-se de que o roteamento está importado
-  ],
+    CommonModule,
+    FormsModule,
+    MatDialogModule,
+    MatFormFieldModule, // Adicionando MatFormFieldModule
+    MatInputModule, // Adicionando MatInputModule
+    MatCheckboxModule, // Adicionando MatCheckboxModule
+    MatIconModule, // Adicionando MatIconModule
+    AdminRoutingModule
+  ]
 })
 export class AdminModule {}

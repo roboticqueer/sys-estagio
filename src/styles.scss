@@ -1,0 +1,40 @@
+@use '@angular/material' as mat;
+
+// Definir paletas de cores personalizadas
+$primary-palette: mat.define-palette(mat.$green-palette); /* Verde como cor primária */
+$accent-palette: mat.define-palette(mat.$light-green-palette); /* Verde claro como cor de destaque */
+$warn-palette: mat.define-palette(mat.$red-palette); /* Vermelho para avisos */
+
+// Criar um tema claro com as paletas
+$custom-theme: mat.define-light-theme((
+  color: (
+    primary: $primary-palette,
+    accent: $accent-palette,
+    warn: $warn-palette,
+  ),
+  typography: mat.define-typography-config(),
+));
+
+// Aplicar o tema globalmente
+@include mat.core();
+@include mat.all-component-typographies();
+@include mat.all-component-themes($custom-theme);
+
+// Estilos globais básicos
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  overflow: hidden; /* Remove barras de rolagem */
+}
+
+body {
+  background-color: #f5f5f5; /* Fundo claro */
+  color: #333; /* Cor do texto padrão */
+}
